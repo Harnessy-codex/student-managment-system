@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BC Academy | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">BC Academy</a>
+    <button id="menu-toggle">☰</button>
+    <nav id="nav-menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="courses.html">Courses</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- your sections go here -->
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Student Management System</h1>
+    <p>Welcome back! Here is an overview of your students' performance.</p>
+    <a href="#registration" class="btn">Register a Student</a>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="dashboard" id="dashboard">
+    <h2>Welcome to the Dashboard</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Total Students</h3>
+        <p id="stat-total">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Passed</h3>
+        <p id="stat-passed">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Failed</h3>
+        <p id="stat-failed">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Average Marks</h3>
+        <p id="stat-average">0</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION FORM -->
+  <section class="registration" id="registration">
+    <h2>Register a Student</h2>
+    <form id="student-form" novalidate>
+      <div class="form-group">
+        <label for="student-name">Full Name</label>
+        <input type="text" id="student-name" placeholder="e.g. Mary Wanjiku">
+      </div>
+
+      <div class="form-group">
+        <label for="student-age">Age</label>
+        <input type="text" id="student-age" placeholder="e.g. 21">
+      </div>
+
+      <div class="form-group">
+        <label for="student-gender">Gender</label>
+        <select id="student-gender">
+          <option value="">Select gender</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="student-course">Course</label>
+        <select id="student-course">
+          <option value="">Select course</option>
+          <option value="Software Development">Software Development</option>
+          <option value="Web Design">Web Design</option>
+          <option value="Data Analysis">Data Analysis</option>
+          <option value="Cyber Security">Cyber Security</option>
+          <option value="Networking">Networking</option>
+          <option value="Graphic Design">Graphic Design</option>
+          <option value="Digital Marketing">Digital Marketing</option>
+          <option value="Computer Packages">Computer Packages</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="student-marks">Marks (0 - 100)</label>
+        <input type="text" id="student-marks" placeholder="e.g. 75">
+      </div>
+
+      <button type="submit" class="btn">Register Student</button>
+      <p id="form-message" class="message"></p>
+    </form>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="search" id="search">
+    <h2>Search Students</h2>
+    <input type="text" id="search-input" placeholder="Search by name...">
+    <p id="search-message" class="message"></p>
+  </section>
+
+  <!-- STUDENT RECORDS -->
+  <section class="records" id="records">
+    <h2>Student Records</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Performance</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="records-body">
+          <!-- JavaScript will fill these rows -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- PERFORMANCE SUMMARY -->
+  <section class="summary" id="summary">
+    <h2>Performance Summary</h2>
+    <ul id="summary-list">
+      <li>Excellent: <span id="count-excellent">0</span></li>
+      <li>Very Good: <span id="count-verygood">0</span></li>
+      <li>Good: <span id="count-good">0</span></li>
+      <li>Average: <span id="count-average">0</span></li>
+      <li>Failed: <span id="count-failed">0</span></li>
+    </ul>
+  </section>
+
+</main>
+
+  <footer>
+    <p>BC Academy</p>
+    <!-- quick links + copyright -->
+    
+  <p>BC Academy | Equip Talent, Shape Tomorrow</p>
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="courses.html">Courses</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p>&copy; 2026 BC Events. All rights reserved.</p>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
