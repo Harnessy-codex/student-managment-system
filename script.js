@@ -176,11 +176,11 @@ if (studentForm) {
       " | Passed: " + passed +
       " | Failed: " + failed;
 
-    Excellent.textContent = excellent;
+    countExcellent.textContent = excellent;
     countVeryGood.textContent = veryGood;
     countGood.textContent = good;
     countAverage.textContent = average;
-    countFailed.textContent = failed;count
+    countFailed.textContent = failed;
   }
 
   // Call this after EVERY change to the students array.
