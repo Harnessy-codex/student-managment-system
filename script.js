@@ -1,6 +1,5 @@
-/* =====================================================
-   SECTION 1: MOBILE MENU (works on every page)
-   ===================================================== */
+//SECTION 1: MOBILE MENU (works on every page)
+   
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 
@@ -10,18 +9,19 @@ if (menuToggle && navMenu) {
   });
 }
 
-/* =====================================================
-   SECTION 2: STUDENT SYSTEM (only runs on index.html)
-   ===================================================== */
+//SECTION 2: STUDENT SYSTEM 
+   
 const studentForm = document.getElementById("student-form");
 
 if (studentForm) {
 
-  /* ---------- 2A. DATA ---------- */
+  //DATA 
+
   let students = [];
   let nextId = 1;
 
-  /* ---------- 2B. GRAB HTML ELEMENTS ---------- */
+ //2B. GRAB HTML ELEMENTS 
+
   const recordsBody = document.getElementById("records-body");
   const formMessage = document.getElementById("form-message");
   const searchInput = document.getElementById("search-input");
@@ -39,9 +39,8 @@ if (studentForm) {
   const countAverage = document.getElementById("count-average");
   const countFailed = document.getElementById("count-failed");
 
-  /* =====================================================
-     SECTION 3: PERFORMANCE HELPERS
-     ===================================================== */
+  //SECTION 3: PERFORMANCE
+     
   function getPerformance(marks) {
     if (marks >= 80) {
       return "Excellent";
@@ -60,9 +59,8 @@ if (studentForm) {
     return label.toLowerCase().replace(" ", "-");
   }
 
-  /* =====================================================
-     SECTION 4: DISPLAY THE RECORDS TABLE
-     ===================================================== */
+  //SECTION 4: DISPLAY THE RECORDS TABLE
+
   function addCell(row, text) {
     const cell = document.createElement("td");
     cell.textContent = text;
@@ -105,9 +103,8 @@ if (studentForm) {
     }
   }
 
-  /* =====================================================
-     SECTION 5: SEARCH + STATISTICS + REFRESH
-     ===================================================== */
+  //SECTION 5: SEARCH + STATISTICS + REFRESH
+     
 
   // Returns the students to show: all of them, or only those
   // whose name contains the text typed in the search box.
@@ -190,9 +187,8 @@ if (studentForm) {
   }
 console.log(countExcellent, countVeryGood, countGood, countAverage, countFailed);
 
-  /* =====================================================
-     SECTION 6: REGISTRATION FORM
-     ===================================================== */
+  //SECTION 6: REGISTRATION FORM
+    
   function showFormMessage(text, type) {
     formMessage.textContent = text;
     formMessage.className = "message " + type;
@@ -245,16 +241,13 @@ console.log(countExcellent, countVeryGood, countGood, countAverage, countFailed)
     refresh();
   });
 
-  /* =====================================================
-     SECTION 7: DELETE + UPDATE MARKS
-     One listener on the table body handles every button
-     (this is called event delegation).
-     ===================================================== */
+  //SECTION 7: DELETE + UPDATE MARKS
+     
   recordsBody.addEventListener("click", function (event) {
     const clicked = event.target;
     const id = Number(clicked.dataset.id); // which student?
 
-    // ----- DELETE -----
+    // DELETE
     if (clicked.classList.contains("btn-delete")) {
       const sure = confirm("Are you sure you want to delete this student?");
       if (sure) {
@@ -266,7 +259,7 @@ console.log(countExcellent, countVeryGood, countGood, countAverage, countFailed)
       }
     }
 
-    // ----- UPDATE MARKS -----
+    //UPDATE MARKS 
     if (clicked.classList.contains("btn-update")) {
       // the input is in the same cell as the button
       const marksInput = clicked.parentElement.querySelector(".marks-input");
@@ -287,18 +280,16 @@ console.log(countExcellent, countVeryGood, countGood, countAverage, countFailed)
     }
   });
 
-  /* =====================================================
-     SECTION 8: SEARCH EVENT
-     ===================================================== */
+  //SECTION 8: SEARCH EVENT
+     
   // "input" fires on every keystroke, so results update as you type.
   searchInput.addEventListener("input", refresh);
 
   refresh(); // draw the empty table and zero stats on page load
 }
 
-/* =====================================================
-   SECTION 9: CONTACT FORM (only runs on contact.html)
-   ===================================================== */
+//SECTION 9: CONTACT FORM (only runs on contact.html)
+   
 const contactForm = document.getElementById("contact-form");
 
 if (contactForm) {
