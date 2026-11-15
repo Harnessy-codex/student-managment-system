@@ -176,11 +176,11 @@ if (studentForm) {
       " | Passed: " + passed +
       " | Failed: " + failed;
 
-    countExcellent.textContent = excellent;
+    Excellent.textContent = excellent;
     countVeryGood.textContent = veryGood;
     countGood.textContent = good;
     countAverage.textContent = average;
-    countFailed.textContent = failed;
+    countFailed.textContent = failed;count
   }
 
   // Call this after EVERY change to the students array.
@@ -188,6 +188,7 @@ if (studentForm) {
     renderStudents(getVisibleStudents());
     updateStats();
   }
+console.log(countExcellent, countVeryGood, countGood, countAverage, countFailed);
 
   /* =====================================================
      SECTION 6: REGISTRATION FORM
